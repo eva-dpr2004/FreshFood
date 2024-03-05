@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+    <title>FreshFood</title>
+</head>
+<body>
+    <%- include('header') %>
+    <!----------------------------------------------------------------------- MAIN ----------------------------------------------------------------------->
+    <main>
+        <div class="top-container">
+            <div class="home-top">
+                <img src="/img/homepage/zero-waste-rbg.png" class="image">
+                <h2 class="titre1">Discover personalized recipes, designed to help you cook delicious meals based on the ingredients you have at home !</h2>
+            </div>
+            <a href="/recettes"><button class="button-top">Give it a try !</button></a>
+        </div>
+        <div class="home-top">
+            <img src="/img/homepage/ustensiles1.png" class="image2">
+            <h2 class="titre2">Hundreds of innovative and budget-friendly recipes!</h2>
+        </div>
+        <img src="/img/homepage/livre.png" class="livre">
+        <div class="home-top">
+            <img src="/img/homepage/toque-rbg.png" class="image3">
+            <h2 class="titres">Discover authentic and delicious recipes showcasing the unique flavors of countries around the world!</h2>
+        </div>
+
+        <!------------------------------------------------------------------- SLIDER --------------------------------------------------------------------->
+        <div class="slider-overflow">
+            <div class="cadre-plats">
+                <img src="/img/homepage/plat1.png" class="plat-image">
+            </div>
+
+            <div class="cadre-plats">
+                <img src="/img/homepage/plat2.png" class="plat-image">
+            </div>
+
+            <div class="cadre-plats">
+                <img src="/img/homepage/plat3.png" class="plat-image">
+            </div>
+
+            <div class="cadre-plats">
+                <img src="/img/homepage/plat4.png" class="plat-image">
+            </div>
+
+            <div class="cadre-plats">
+                <img src="/img/homepage/plat5.png" class="plat-image">
+            </div>
+
+            <div class="cadre-plats">
+                <img src="/img/homepage/plat6.png" class="plat-image">
+            </div>
+
+            <div class="cadre-plats">
+                <img src="/img/homepage/plat7.png" class="plat-image">
+            </div>
+        
+            <div class="cadre-plats"> 
+                <img src="/img/homepage/plat8.png" class="plat-image">
+            </div>
+
+            <div class="cadre-plats"> 
+              <img src="/img/homepage/plat9.png" class="plat-image">
+            </div>
+        </div>
+        <!--------------------------------------------------------------- CARD ARTICLES ---------------------------------------------------------------->
+        <h2 class="titre3">Explore a variety of captivating articles covering a broad range of exciting and informative topics.</h2>
+        <div class="card-articles-container">
+          <div class="card-articles">
+            <p>What is food waste?<br>Numbers and details.</p>
+            <a href="/articles"><img src="/img/homepage/article1.png" style="margin-top: -2%;"></a>
+          </div>
+          <div class="card-articles">
+            <p>How to optimize our consumption habits?</p>
+            <a href="/articles"><img src="/img/homepage/article2.png" class="img-article2"></a>
+          </div>
+          <div class="card-articles">
+            <p>The consequences of food waste on the planet.</p>
+            <a href="/articles"><img src="/img/homepage/article3.png" class="img-article3"></a>
+          </div>
+        </div>
+    </main>
+    <%- include('footer') %>
+    <script src="/scripts.js"></script>
+</body>
+</html>

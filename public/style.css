@@ -1,0 +1,971 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: rgb(239, 239, 239);
+}
+
+main{
+    cursor: url("/img/souris-toque.png"), auto;
+}
+/*************************************************************  NAVBAR  ********************************************************************************/
+nav{
+    background-color: #E8F9F5;
+    padding: 5px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-bottom: 15px;
+    margin-left: 17%;
+}
+
+nav ul li a {
+    color: #7DC2A5; 
+}
+
+nav ul img{
+    width: 50px;
+    margin-top: -15px;
+    margin-left: 85px;
+}
+
+nav ul button{
+    width: 100px;
+    height: 25px;
+    margin-left: -100px;
+    color: #7DC2A5;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+}
+
+.img-nav{
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    margin-left: 20px;
+}
+
+li{
+  font-size: medium;
+  font-weight:600;
+}
+/*****************************************************************  FOOTER   *******************************************************************************/
+footer{
+    background-color: #e8f9f5;
+}
+
+.freshfood-footer {
+    width: 150px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 45%;
+  }
+
+.footer-container{
+    max-width: 1170px;
+    margin:auto;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 6%;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  .footer{
+    background-color: #24262b;
+    padding: 70px 0;
+  }
+
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+
+  .footer-col h4{
+    font-size: 20px;
+    color: #7dc2a5;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 600;
+    position: relative;
+  }
+
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    color: #7dc2a5;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .footer-col ul li a:hover{
+    color: hsl(163, 60%, 69%);
+    padding-left: 8px;
+  }
+/*************************************************************  FORMULAIRES  **************************************************************************/
+.rlTitres{
+    margin-top: 2%;
+    text-align: center;
+    color: #58b394;
+}
+
+.rlTitres2{
+    margin-top: 2%;
+    text-align: center;
+    text-decoration: underline;
+    color: #58b394;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 6%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4b997f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 25px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #57d1a9;
+}
+
+.lien-login{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color:  #7DC2A5;
+}
+/*****************************************************************  FORMULAIRE RECETTE  *************************************************************************************/
+form {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+
+.title {
+    justify-content: center;
+    text-align: center;
+}
+
+.formulaire-recettes {
+    max-width: 1010px;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding: 20px;
+    border-radius: 8px;
+    background: #e1e1e1;
+}
+
+.formulaire-recettes form {
+    display: grid;
+    gap: 15px;
+}
+
+.formulaire-recettes label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.formulaire-recettes input{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formulaire-recettes textarea {
+    width: 100%;
+    max-width: 100%; 
+    height: 60%; 
+    max-height: 500px; 
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.formulaire-recettes button {
+    background-color: #7DC2A5;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formulaire-recettes button:hover {
+    background-color: #45a049;
+}
+/**************************************************************  MESSAGES  **************************************************************************************/
+.error-message{
+    width: 25%;
+    background-color: #d63333df;
+    color: #580000;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    margin-bottom: 25px;
+    margin-left: 37%;
+    text-align: center;
+}
+
+.success-message{
+    width: 25%;
+    background-color: #4b997f;
+    color: #000000;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    margin-bottom: 25px;
+    margin-left: 37%;
+    text-align: center;
+}
+/*************************************************************  PAGE D'ACCUEIL  ********************************************************************************/
+.welcome-user{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 600;
+    color: #7DC2A5;
+    margin-top: 2%;
+}
+
+.button-top{
+    background-color: #4DC995;
+    color: white;
+    width: 275px;
+    padding: 8px;
+    font-size: 14px;
+    border: solid 2px;
+    border-radius: 10px;
+}
+
+.top-container {
+    text-align: center;
+    padding: 20px; 
+    margin-top: 2%;
+}
+
+.home-top {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: row-reverse; 
+}
+
+.image {
+    width: 150px;
+    margin-left: 2%;
+}
+
+.image2{
+    width: 50px;
+    margin-left: -33%;
+    margin-top: 2%;
+}
+
+.image3{
+    width: 50px;
+    margin-left: -20%;
+    margin-top: 2%;
+}
+
+.titres{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: -20%;
+    color: #7DC2A5;
+}
+
+.titre1 {
+    width: 55%;
+    margin-left: 10%;
+    color: #7DC2A5;
+}
+
+.titre2 {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: -32%;
+    color: #7DC2A5;
+}
+
+.titre3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3%;
+    color: #7DC2A5;
+}
+/*****************************************************************  MIDDLE   ***********************************************************************************/
+.livre{
+    width: 100%;
+    height: 75vh;
+    margin-top: 2%;
+}
+
+.slider-overflow {
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.cadre-plats {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 16%;
+    flex-shrink: 0;
+    max-width: 25%;
+    margin: 0 10px;
+}
+
+.plat-image{
+    width: 85%;
+}
+
+.plat-image img {
+    width: 100%;
+    height: 300px;
+}
+/******************************************************************  ARTICLES   ****************************************************************************************************/
+.card-articles-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.card-articles {
+    width: 20%; 
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-articles img {
+    width: 80%;
+    height: auto;
+    display: block;
+    flex: 1;
+    object-fit: contain;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.card-articles p {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3F6B59;
+    margin-top: 2%;
+}
+
+.card-articles {
+    transition: transform 0.3s ease-in-out;
+}
+  
+.card-articles:hover {
+    transform: scale(1.05);
+}
+/************************************************************  PAGE ARTICLES   **********************************************************************************************/
+.titre-articles{
+   text-align: center;
+   text-decoration: underline 2px;
+   color: #58b394;
+}
+
+.Allvideos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+ }
+/*************************************************************  PAGE RECETTES  ********************************************************************************/
+.btn{
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+.text{
+    opacity: 0.8;
+}
+.title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.container{
+    min-height: 100vh;
+}
+.meal-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+      margin-top: 0px;
+    padding: 2rem;
+    background: #e1e1e1;
+    text-align: center;
+    margin-top: 2%;
+    border-radius: 10px;
+  }
+/*************************************************************  MES RECETTES  ********************************************************************************/
+.card-title{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #24262b;
+}
+
+.card-text {
+    word-wrap: break-word;
+    max-width: 35ch;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+.card {
+    margin-bottom: 25px;
+    background-color: #ececec;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  }
+/*************************************************************  RECHERCHE  ********************************************************************************/
+.meal-search{
+    margin: 2rem 0;
+}
+
+.meal-search cite{
+    font-size: 1rem;
+}
+
+.meal-search-box{
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.search-control,
+.search-btn{
+    width: 100%;
+}
+.search-control,
+.search-btn{
+    width: 100%;
+}
+
+.search-control{
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid var(--tenne-tawny);
+    color: var(--tenne-tawny);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.search-control::placeholder{
+    color: var(--tenne-tawny);
+}
+.search-btn{
+    width: 73px;
+    height: 39px;
+    font-size: 1.8rem;
+    background: var(--tenne-tawny);
+    color: #fff;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.search-btn:hover{
+    background: var(--tenne-tawny-dark);
+}
+
+.meal-result{
+    margin-top: 4rem;
+}
+
+#meal{
+    margin: 2.4rem 0;
+}
+
+.meal-item{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+}
+
+.meal-img img{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.meal-name{
+    padding: 1.5rem 0.5rem;
+}
+
+.meal-name h3{
+    font-size: 1.4rem;
+}
+.recipe-btn{
+    text-decoration: none;
+    color: #000000;
+    background: var(--tenne-tawny);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.recipe-btn:hover{
+    background: var(--tenne-tawny-dark);
+}
+/*********************************************************************  DETAILS RECETTES  *************************************************************************************/
+.meal-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: #fff;
+    background: var(--tenne-tawny);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: 2rem 0;
+}
+.meal-details::-webkit-scrollbar{
+    width: 10px;
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background: #f0f0f0;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+/********************************************************************** RECETTES AFFICHAGE *********************************************************/
+.showRecipe{
+    display: block;
+}
+
+.meal-details-content{
+    margin: 2rem;
+}
+.meal-details-content p:not(.recipe-category){
+    padding: 1rem 0;
+}
+.recipe-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+.recipe-title{
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+.recipe-category{
+    background: #fff;
+    font-weight: 600;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+.recipe-category{
+    background: #a8c1b2;;
+    font-weight: 600;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+.recipe-instruct{
+    padding: 1rem 0;
+}
+.recipe-meal-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.recipe-link{
+    margin: 1.4rem 0;
+}
+.recipe-link a{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.recipe-link a:hover{
+    opacity: 0.8;
+}
+/*********************************************************************  PROFIL  *************************************************************************************/
+.titre-profile{
+    text-align: center;
+    text-decoration: underline 2px;
+    color: #58b394;
+    margin-top: 2%;
+  }
+
+.profil-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.btn-primary, .btn-danger {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #fff;
+  }
+
+.btn-primary {
+    background-color: #4b997f;
+  }
+
+  .btn-danger {
+    background-color: #e74c3c;
+  }
+
+  .btn-primary:hover, .btn-danger:hover {
+    background-color: #2c3e50;
+  }
+
+.container-mt-4{
+    margin-bottom: 2%;
+}
+
+.avatar-ctn {
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    border-radius: 55px;
+}
+
+.avatar{
+    width: 20%;
+    border-radius: 5px;
+}
+
+.card-profile{
+    margin-top: 10%;
+    margin-bottom: 30%;
+}
+
+h4 {
+    margin-top: 2px;
+    color: #58b394;
+    text-decoration: underline;
+  }
+
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 5%;
+    box-shadow: 2px 4px 8px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+
+  td a {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+
+  td a.btn-info {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  td a.btn-danger {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+
+  td a.btn-info:hover, td a.btn-danger:hover {
+    background-color: #2c3e50;
+  }
+/********************************************************************* DELETE *************************************************************************************/
+.deleteButton{
+    background-color: #ff0000;
+}
+/*************************************************************** DONATION LOCATION ********************************************************************************/
+.donationLocations-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.association-card {
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 50px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(32.33% - 30px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+h2 {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.association-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.association-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.association-link {
+    color: #007BFF;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.association-link:hover {
+    text-decoration: underline;
+}
+/******************************************************************* CONTACT *************************************************************************************/
+
+details, summary {
+    max-width: 500px;
+}
+
+details {
+    background: #f6f6f6;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 50px auto 0;
+    margin-bottom: 0px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    margin-bottom: 4%;
+  }
+
+summary {
+    user-select: none;
+    padding: 25px;
+    font-size: 20px;
+    list-style: none
+}
+
+details p {
+    line-height: 1.5;
+    padding: 0px 15px 15px;
+    cursor: auto;
+}
+
+details summary::before { 
+  content:"+"; 
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.5s ease-out;
+}
+
+details[open] summary::before {
+    transform: rotate(360deg);
+}
+
+.contact-details-container h1 {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    text-decoration: underline rgb(44, 44, 44);
+    color: #3C3C3C;
+  }
+
+.contact-details-container {
+    margin-bottom: 12%;
+    margin-top: 5%;
+  }
+
+.details-img {
+    width: 35px;
+    vertical-align: middle; /* Alignement vertical au milieu */
+    margin-right: 10px; /* Espacement entre l'image et le texte */
+  }
+  
+
+/******************************************************************* TERMS OF USE *************************************************************************************/
+  section {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}

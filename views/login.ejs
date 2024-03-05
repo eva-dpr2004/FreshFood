@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/responsive.css">
+  <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+  <title>FreshFood</title>
+</head>
+<body>
+  <%- include('header') %>
+  <main>
+    <div class="main-container">
+      <br>
+      <h2 class="rlTitres2">Log in here :</h2>
+      <br>
+      <a href="/register" class="lien-login">Don't have an account yet? Click here!</a>
+      <br>
+      <br>
+      <form action="/auth/login" method="POST" style="margin-bottom: 6%;">  
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" style="width: 90%;"><br><br>
+          
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" style="width: 90%;"><br><br>
+
+        <button type="submit">Log In</button>
+      </form>
+      <% if (typeof remplirMessage !== 'undefined') { %>
+        <div class="error-message">
+            <p><%= remplirMessage %></p>
+        </div>
+      <% } %>
+      <% if (typeof incorrectMessage !== 'undefined') { %>
+        <div class="error-message">
+            <p><%= incorrectMessage %></p>
+        </div>
+      <% } %>      
+    </div>
+  </main>
+  <%- include('footer') %>
+</body>
+</html>

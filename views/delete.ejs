@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+    <title>FreshFood</title>
+</head>
+<body>
+    <%- include('header') %>
+    <!------------------------------------------------------------- MAIN ----------------------------------------------------------------------->
+    <main>
+        <br>
+        <h2 class="titre-profile" style="margin-top: 5%;">Are you sure you really want to delete this account? If so, please press the button.</h2>
+        <br>
+        <h4 class="titre-profile">Keep in mind that you won't be able to revert this action, and you will be redirected to the homepage.</h4>
+        <form method="POST" action="/auth/delete" style="margin-bottom: 7%;margin-top: 4%;" class="updateForm">
+            <input type="hidden" name="userId" value="<%= accountUser.UserId %>">
+            <div>
+                <br>
+                <label>Delete Account</label>  
+                <br>
+                <button type="submit" class="deleteButton">Delete my Account</button>
+            </div>
+            <br>
+        </form>
+        <br>
+    </main>
+    <%- include('footer') %>
+    <script src="/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+    <title>FreshFood</title>
+</head>
+<body>
+    <%- include('header') %>
+    <!----------------------------------------------------------------------- MAIN ----------------------------------------------------------------------->
+    <main>
+        <br>
+        <h2 class="titre-profile">Votre profil</h2>
+        <div class="container-mt-4">
+            <div class="profil-row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="avatar-ctn">
+                            <img src="/img/user.png" alt="alt" class="avatar">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-profile">
+                                <h3>My informations</h3>
+                                <ul>
+                                    <li>Last name :<%= accountUser.lastName %></li>
+                                    <li>First name : <%= accountUser.firstName %></li>
+                                    <li>Email : <%= accountUser.email %></li>
+                                </ul>
+                            </div>
+                            <a href="/update" class="btn btn-primary">Edit my information</a>
+                            <a href="/delete" class="btn btn-danger mt-4">Delete my account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dashboard admin (visible uniquement pour les admins) -->
+        <% if (accountUser.role === 'admin') { %>
+            <div class="col-8">
+                <div class="admin-dashboard">
+                    <h2 class="titre-profile" style="margin-bottom: 2%;">Admin Dashboard</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User Id</th>
+                                <th>Last Name</th>
+                                <th>First Name</th>
+                                <th>Email</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% accountUsers.forEach(user => { %>
+                                <tr>
+                                    <td><%= user.UserId %></td>
+                                    <td><%= user.lastName %></td>
+                                    <td><%= user.firstName %></td>
+                                    <td><%= user.email %></td>
+                                    <td>
+                                        <a href="/updateAdmin" class="btn btn-primary">Edit</a>
+                                    </td>
+                                    <td>
+                                        <a href="/deleteAdmin" class="btn btn-danger mt-4">Delete</a>
+                                    </td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <% } %>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

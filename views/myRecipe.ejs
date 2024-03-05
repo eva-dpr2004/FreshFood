@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+    <title>FreshFood</title>
+</head>
+<body>
+    <%- include('headerB') %>
+    <!----------------------------------------------------------------------- MAIN ----------------------------------------------------------------------->
+    <main>
+        <!----------------------- GENERATEUR DE RECETTE --------------------------->   
+        <div class="generateur-container">
+            <div class="meal-wrapper">
+                <div class="meal-search">
+                    <div class="title">
+                        <h2>Find recipes created by users</h2>
+                        <blockquote>The kitchen is the expression of cultures from around the world.
+                            <cite>– Jacques Pépin</cite>
+                        </blockquote>
+                        <br>
+                    </div>
+                    <div class="meal-result">
+                        <!------------  AFFICHER RECETTE ICI  -------------->
+                        <% if (locals.recettes) { %>
+                            <div class="row">
+                                <% recettes.forEach(recette => { %>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <h2 class="card-title"><%= recette.titreRecettes %></h2>
+                                            <img src="<%= recette.images %>" class="card-img-top" alt="Recipe Image">
+                                            <div class="card-body">
+                                                <p class="card-text"><strong>Category:</strong> <%= recette.categorieRecettes %></p>
+                                                <p class="card-text"><strong>Ingredients:</strong> <%= recette.ingredients %></p>
+                                                <p class="card-text"><strong>Steps:</strong> <%= recette.etapesRecettes %></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% }); %>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>    
+    <%- include('footer') %>
+    <script src="/script.js"></script>
+</body>
+</html>

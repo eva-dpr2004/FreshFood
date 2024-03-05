@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+    <title>FreshFood</title>
+</head>
+<body>
+    <%- include('header') %>
+    <!------------------------------------------------------------- MAIN ----------------------------------------------------------------------->
+    <main>
+        <br>
+        <br>
+        <br>
+        <div class="Allvideos">
+            <div class="video-container">
+                <h2 class="titre-articles">Food consumption and conservation</h2>
+                <div class="video-articles">
+                    <video src="/video/Date-de-consommation.mp4" width="520" height="320" poster="/img/miniatures/miniature1.png" controls></video>
+                </div>
+            </div>   
+            <div class="video-container">
+                <h2 class="titre-articles">What is food waste?</h2>
+                <div class="video-articles">
+                    <video src="/video/what-is-food-waste.mp4" width="520" height="320" poster="/img/miniatures/miniature2.png" controls></video>
+                </div>
+            </div>    
+        </div>
+        <br>
+        <br>
+        <br>
+    </main>
+    <%- include('footer') %>
+    <script src="/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+    <title>FreshFood</title>
+</head>
+<body>
+    <%- include('header') %>
+    <!------------------------------------------------------------- MAIN ----------------------------------------------------------------------->
+    <main>
+        <div class="formulaire-recettes">
+            <div class="title">
+                <br>
+                <h2>Add your recipe</h2>
+                <blockquote>Gastronomy is the art of using food to create happiness.
+                <cite>- Theodore Zeldin</cite>
+                </blockquote>
+                <br>
+            </div>
+            <form action="/addRecipe" method="POST" enctype="multipart/form-data" style="margin-bottom: 5%;">
+                <label for="titreRecettes">Recipe Title</label>
+                <input type="hidden" name="UserId" value=<%= accountUser.UserId %>>
+                <input type="text" id="titreRecettes" name="titreRecettes" required><br><br>
+                
+                <label for="images">Images :</label>
+                <input type="file" id="images" name="images" required><br><br>
+
+                <label for="nombrePersonnes">Number of servings</label>
+                <input type="text" id="nombrePersonnes" name="nombrePersonnes" required><br><br>
+                
+                <label for="categorieRecettes">Recipe Category :</label>
+                <input type="text" id="categorieRecettes" name="categorieRecettes" required><br><br>
+
+                <label for="ingredients">Ingrédients :</label>
+                <input type="text" id="ingredients" name="ingredients" required><br><br>
+                
+                <label for="etapesRecettes">Steps :</label>
+                <textarea id="etapesRecettes" name="etapesRecettes" rows="4" required></textarea><br><br>
+        
+                <button type="submit" class="formButton">Send</button>
+            </form>
+        </div>
+    </main>    
+    <%- include('footer') %>
+    <script src="/script.js"></script>
+</body>
+</html>

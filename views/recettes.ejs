@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+    <title>FreshFood</title>
+</head>
+<body>
+    <%- include('header') %>
+    <!----------------------------------------------------------------------- MAIN ----------------------------------------------------------------------->
+    <main>
+    <!----------------------- GENERATEUR DE RECETTE --------------------------->   
+    <div class="generateur-container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <div class="title">
+                    <h2>Find a recipe with your ingredients.</h2>
+                     <blockquote>Gastronomy is the art of using food to create happiness.
+                     <cite>- Theodore Zeldin</cite>
+                     </blockquote>
+                     <br>
+                    <div class="meal-search-box">
+                        <input type="text" class="search-content" placeholder="Write an ingredient or recipe name." id="search-input">
+                        <button type="submit" class="search-btn btn" id="search-btn">
+                          <i class = "fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="meal-result">
+                    <h2 class="title">Here is your result:</h2>
+                    <div id="meal">
+                        <!--  meal item   -->
+                        <div class="meal-item">
+                            <div class="meal-img">
+                                <img src="/img/recettes/oeufs.png" alt="food">
+                            </div>
+                            <div class="meal-name">
+                                <h3>Poached eggs</h3>
+                                <a href="#" class="recipe-btn">Discover the recipe</a>
+                            </div>
+                        </div>
+                        <!--   end of meal item   -->
+                        <!--  meal item   -->
+                        <div class="meal-item">
+                            <div class="meal-img">
+                                <img src="/img/recettes/soupe-potimaron.png" alt="food">
+                            </div>
+                            <div class="meal-name">
+                                <h3>Potimaron soup</h3>
+                                <a href="#" class="recipe-btn">Discover the recipe</a>
+                            </div>
+                        </div>
+                        <!--   end of meal item   -->
+                        <!--  meal item   -->
+                        <div class="meal-item">
+                            <div class="meal-img">
+                                <img src="/img/recettes/soupe-poireaux-navets.png" alt="food">
+                            </div>
+                            <div class="meal-name">
+                                <h3>leek and turnip soup</h3>
+                                <a href="#" class="recipe-btn">Discover the recipe</a>
+                            </div>
+                        </div>
+                        <!--   end of meal item   -->
+                    </div>
+                </div>
+
+                <div class="meal-details">
+                    <!--   recipe close btn   -->
+                    <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                    <!--   meal content   -->
+                    <div class="meal-details-content">
+                        <h2 class="recipe-title">Name of the dish here</h2>
+                        <p class="recipe-category">Category name</p>
+                        <div class="recipe-instruct">
+                            <h3>Instructions :</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati quod impedit reprehenderit a eos error, minus dolorum laborum tempora incidunt vero temporibus hic provident voluptatibus praesentium est eius non repellendus.</p>
+                        </div>
+                        <div class="recipe-meal-img">
+                            <img src="/img/recettes/food.jpg" alt="food">
+                        </div>
+                        <div class="recipe-link">
+                            <a href="#" target="_blank">Watch the video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <br>
+    <br>
+    <!------------  AFFICHER RECETTE ICI  -------------->  
+    <% if (locals.recettes) { %>   
+        <%  recettes.forEach(recette => { %>
+            <tr>
+                <td><%= recette.titreRecettes %></td>
+                <td><%= recette.categorieRecettes %></td>
+                <td><%= recette.ingredients %></td>
+                <td><%= recette.etapesRecettes %></td>
+            </tr>
+        <% }); %>
+    <% } %>
+    </main>    
+    <%- include('footer') %>
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/responsive.css">
+  <link rel="shortcut icon" href="/img/freshfood-mini.PNG" type="image/x-icon">
+  <title>FreshFood</title>
+</head>
+<body>
+  <%- include('header') %>
+  <main>
+    <div class="main-container">
+      <br>
+      <h2 class="rlTitres2">Create an account here :</h2>
+      <br>
+      <a href="/login" class="lien-login">Already have an account? Click here!</a>
+      <br>
+      <br>
+      <div class="formulaire">
+        <form action="/auth/register" method="POST" style="margin-bottom: 2%;">
+          <label for="lastName">Last name :</label>
+          <input type="text" id="lastName" name="lastName" pattern="^[A-Za-z]+$" title="Names must contain only letters" required style="width: 90%;"><br><br>
+            
+          <label for="firstName">First name :</label>
+          <input type="text" id="firstName" name="firstName" pattern="^[A-Za-z]+$" title="Names must contain only letters" required style="width: 90%;"><br><br>
+            
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required style="width: 90%;"><br><br>
+            
+          <label for="password">Password :</label>
+          <input type="password" id="password" name="password" pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()-_+=]).{12,}$" title="The password does not meet the security criteria (at least 12 characters, including at least one uppercase letter, one digit, and one special character among !@#$%^&*()-_+=)." required style="width: 90%;"><br><br>
+            
+          <label for="password">Password confirmation</label>
+          <input type="password" id="passwordConfirm" name="passwordConfirm" required style="width: 90%;"><br><br>
+  
+          <label>
+            <input type="checkbox" name="termsOfUse" required> Terms of Use
+          </label><br><br>
+
+          <button type="submit" class="formButton">Send</button>
+        </form>        
+  
+        <% if (typeof errorMessage !== 'undefined') { %>
+          <div class="error-message">
+              <p><%= errorMessage %></p>
+          </div>
+        <% } %>
+  
+        <% if (typeof successMessage !== 'undefined') { %>
+          <div class="success-message">
+              <p><%= successMessage %></p>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </main>
+  <%- include('footer') %>
+</body>
+</html>
